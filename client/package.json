@@ -1,0 +1,35 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbo --port 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "npx @biomejs/biome check --apply ./src",
+    "postinstall": "npx husky install"
+  },
+  "dependencies": {
+"react": "^18",
+  "react-dom": "^18",
+    "next": "14.1.4"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.6.3",
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "husky": "^9.0.11",
+    "eslint": "^8",
+    "lint-staged": "^15.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+   "lint-staged": {
+    "*.{js,jsx,ts,tsx}":  ["pnpm run lint"]
+  }
+}
