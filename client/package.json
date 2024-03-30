@@ -1,0 +1,33 @@
+{
+  "name": "chat-app-client",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "license": "MIT",
+  "author": "gugeorgy",
+  "scripts": {
+    "dev": "next dev --turbo --port 3000",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "14.1.4",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gugeorgy/CHAT-APP.git"
+  },
+  "keywords": ["Typescript", "Node.js", "Express.js", "Socket.io", "Mongoose", "JWT", "Bcrypt", "Husky", "Jest"],
+  "bugs": {
+    "url": "https://github.com/gugeorgy/CHAT-APP/issues"
+  },
+  "homepage": "https://github.com/gugeorgy/CHAT-APP#readme"
+}

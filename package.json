@@ -1,0 +1,41 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "license": "MIT",
+  "author": "gugeorgy",
+  "scripts": {
+    "lint": "biome check --apply .",
+    "lint:server": "biome check --apply ./server/src",
+    "lint:client": "biome check --apply ./client/src",
+    "format": "biome format --write .",
+    "format:server": "biome format --write ./server/src",
+    "format:client": "biome format --write ./client/src",
+    "postinstall": "husky init",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.6.3",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": ["pnpm run lint"],
+    "*.json": ["pnpm run format"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gugeorgy/CHAT-APP.git"
+  },
+  "keywords": ["Typescript", "Node.js", "Express.js", "Socket.io", "Mongoose", "JWT", "Bcrypt", "Husky", "Jest"],
+  "bugs": {
+    "url": "https://github.com/gugeorgy/CHAT-APP/issues"
+  },
+  "homepage": "https://github.com/gugeorgy/CHAT-APP#readme"
+}
