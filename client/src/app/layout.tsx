@@ -1,3 +1,5 @@
+import { fonts } from '@/libs/fonts';
+import { ChakraProvider } from '@/providers';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -7,12 +9,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className={fonts.rubik.variable}>
+      <body>
+        <ChakraProvider>{children}</ChakraProvider>
+      </body>
     </html>
   );
 }
